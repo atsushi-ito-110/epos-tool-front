@@ -83,7 +83,7 @@ export default {
       return this.showables[index].showabled = !this.showables[index].showabled
     },
     displayShowableDetail(index) {
-      return '▶'
+      return this.showables[index].showabled ? '▼' : '▶'
     }
   }
 }
