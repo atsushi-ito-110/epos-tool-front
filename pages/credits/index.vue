@@ -10,7 +10,9 @@
       <div class="tabs">
         <ul>
           <li
-            v-for="(item, index) in [ { yearMonth: '2021-02' }, { yearMonth: '2021-01' }, { yearMonth: '2020-12' } ]"
+            v-for="(item, index) in [
+              { yearMonth: '2021-02' }, { yearMonth: '2021-01' }, { yearMonth: '2020-12' }
+            ]"
             :key="index"
             :class="{ 'is-active': tabActived(index) }"
             :data-id="index"
@@ -21,15 +23,15 @@
       </div>
       <div class="credit_tree">
         <div v-if="activeTabIndex === 0">
-          <p>合計金額: ¥122,606</p>
+          <p>金額: ¥122,606</p>
           <ul class="tree pl_10">
             <li>スーパー
               <ul class="pl_10">
                 <li>
+                  <a @click="switchShowableDetail(0)">{{ displayShowableDetail(0) }}</a>
                   合計 ¥32,367
-                  <a @click="switchShowableDetail">...</a>
                 </li>
-                <li v-if="showableDetail">
+                <li v-if="showables[0].showabled">
                   <ul class="pl_10">
                     <li>2021年01月24日 アコレミノワエキキタ ¥1,010</li>
                   </ul>
@@ -63,7 +65,11 @@ export default {
   data () {
     return {
       activeTabIndex: 0,
-      showableDetail: false,
+      showables: [
+        { showabled: false },
+        { showabled: false },
+        { showabled: false },
+      ]
     }
   },
   methods: {
@@ -71,10 +77,13 @@ export default {
       return index === this.activeTabIndex
     },
     toActive (index) {
-      this.activeTabIndex = index
+      return this.activeTabIndex = index
     },
-    switchShowableDetail () {
-      this.showableDetail = !this.showableDetail
+    switchShowableDetail (index) {
+      return this.showables[index].showabled = !this.showables[index].showabled
+    },
+    displayShowableDetail(index) {
+      return '▶'
     }
   }
 }
