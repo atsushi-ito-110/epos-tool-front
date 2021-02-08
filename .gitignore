@@ -91,3 +91,6 @@ sw.*
 
 # docker trust
 wallet.pub
+
+# deploy settings
+deploy.sh
