@@ -32,7 +32,9 @@
             </a>
 
             <div class="navbar-dropdown">
-              <nuxt-link to="/credits" class="navbar-item">Credits</nuxt-link>
+              <nuxt-link to="/credits" class="navbar-item">
+                Credits
+              </nuxt-link>
             </div>
           </div>
         </div>
