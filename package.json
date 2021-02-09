@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "HOST=0.0.0.0 PORT=3000 nuxt",
-    "build": "nuxt build",
+    "build": "npm run generate",
     "start": "HOST=0.0.0.0 PORT=3000 nuxt start",
     "generate": "nuxt generate",
     "test": "jest"
@@ -19,6 +19,10 @@
     "@vue/test-utils": "^1.1.2",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
+    "concurrent-transform": "^1.0.0",
+    "gulp": "^4.0.2",
+    "gulp-awspublish": "^4.1.2",
+    "gulp-cloudfront-invalidate-aws-publish": "^1.0.0",
     "jest": "^26.6.3",
     "node-sass": "^4.14.1",
     "nuxt-sass-resources-loader": "^2.0.5",
