@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'epos-tool-front',
+    title: 'Ito\'s wallet',
     htmlAttrs: {
       lang: 'ja'
     },
