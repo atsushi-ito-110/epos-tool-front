@@ -10,9 +10,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@nuxtjs/axios": "^5.13.1",
     "bulma": "^0.9.2",
     "core-js": "^3.8.3",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
