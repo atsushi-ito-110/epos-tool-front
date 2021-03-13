@@ -35,6 +35,9 @@
               <nuxt-link to="/credits" class="navbar-item">
                 Credits
               </nuxt-link>
+              <nuxt-link to="/shops" class="navbar-item">
+                Shops
+              </nuxt-link>
             </div>
           </div>
         </div>
