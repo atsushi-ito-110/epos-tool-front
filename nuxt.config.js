@@ -25,6 +25,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/day.js',
+    '@/plugins/axios'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -38,7 +40,14 @@ export default {
   modules: [
     'nuxt-fontawesome',
     '@nuxtjs/axios',
+    '@nuxtjs/dayjs',
   ],
+
+  publicRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL || 'http://localhost'
+    }
+  },
 
   fontawesome: {
     imports: [
