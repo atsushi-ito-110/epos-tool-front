@@ -162,7 +162,6 @@ export default {
       formData.append('billing_month', `${year}${month}`)
       formData.append('file', this.form.csv)
       // TODO: store化
-      // TODO: base url 的なやつ
       this.$axios.post('api/credits/import',
         formData,
         {
