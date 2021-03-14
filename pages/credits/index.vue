@@ -210,14 +210,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .credits_index {
   .credit_tree {
     padding-left: 10px;
   }
-}
-.file_upload {
-  text-align: right;
-  vertical-align: middle;
 }
 </style>
