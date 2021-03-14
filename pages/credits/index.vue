@@ -39,7 +39,9 @@
             </nuxt-link>
           </li>
           <li>
-            <font-awesome-icon :icon="['fas', 'plus']" />
+            <a class="icon" @click="create">
+              <font-awesome-icon :icon="['fas', 'plus']" />
+            </a>
           </li>
         </ul>
       </div>
@@ -182,12 +184,22 @@ export default {
         }).catch((error) => {
           console.log(error)
         })
+    },
+    create () {
+      this.$axios.post('api/credits', {
+      }).then(response => {
+        console.log(response.data)
+        this.fetchCredit()
+      }).catch(error => {
+        console.log(error);
+      })
+
     }
   },
   created () {
     console.log('created')
     if (this.$route.query.year_month === undefined) {
-      this.activedMonth = this.yearMonths[0].yearMonth
+      this.activedMonth = this.$dayjs().format('YYYY-MM')
     } else {
       this.activedMonth = this.$route.query.year_month
     }
